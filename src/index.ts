@@ -1,29 +1,7 @@
-import { Toolbar } from "./Toolbar";
+import { Plugin } from "./Plugin";
+import { Toolbar } from "./objects/Toolbar";
+import { Button } from "./objects/Button";
+import { Action } from "./objects/Action";
+import { Menu } from "./objects/Menu";
 
-class Plugin {
-	toolbar(name: string): Toolbar {
-		return new Toolbar(name);
-	}
-
-	activate(exclusiveMouse: boolean = false): this {
-		plugin.Activate(exclusiveMouse);
-		return this;
-	}
-
-	deactivate(): this {
-		plugin.Deactivate();
-		return this;
-	}
-
-	isActivated(): boolean {
-		return plugin.IsActivated();
-	}
-
-	isActivatedWithExclusiveMouse(): boolean {
-		return plugin.IsActivatedWithExclusiveMouse();
-	}
-
-	constructor(name: string) {}
-}
-
-export { Plugin };
+export { Plugin, Toolbar, Button, Action, Menu };
